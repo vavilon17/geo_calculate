@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 public class LocationCalculator {
 
     public LocationData calculate(GeoRequest request) {
-        return new LocationData();
+        LocationData locationData = new LocationData();
+        locationData.setLon("1111");
+        locationData.setLat("2222");
+        return locationData;
     }
 }

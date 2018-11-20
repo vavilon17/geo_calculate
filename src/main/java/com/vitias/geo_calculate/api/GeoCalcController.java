@@ -20,7 +20,7 @@ public class GeoCalcController {
     @Autowired
     private LocationCalculator locationCalculator;
 
-    @RequestMapping(path = "/ping", method = RequestMethod.GET)
+    @RequestMapping(path = "/calculate", method = RequestMethod.POST)
     public ResponseEntity dataImportAuto(GeoRequest data) {
         LocationData res = locationCalculator.calculate(data);
         return new ResponseEntity(res, HttpStatus.OK);
